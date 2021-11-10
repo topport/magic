@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-ds-badger3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third/badger" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thrid/go-ds-badger3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thrid/go-ds-crdt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thrid/ipfs-lite" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thrid/ipfs-nucleus" vcs="Git" />
+  </component>
+</project>

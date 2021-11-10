@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "datahop.types";
+
+message StringSlice {
+  repeated string output = 1;
+}
+
+message String {
+  repeated string output = 1;
+}
