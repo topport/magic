@@ -1,0 +1,11 @@
+---
+log-level: error
+
+targets:
+  - service-name: foo
+    application-name: foo.app
+    spy-name: debugspy
+
+tags:
+  foo: bar
+  baz: qux

@@ -60,4 +60,7 @@ This software is part of the NGI Pointer project "Incentivised Content Dissemina
 received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No
 871528
 
-<p align="center"><img  alt="ngi logo" src="./Logo_Pointer.png" width=40%> <img  alt="eu logo" src="./eu.png" width=25%></p>
+
+
+
+go run main.go server --config ~/.magic.yml

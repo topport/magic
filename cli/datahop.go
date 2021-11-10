@@ -4,19 +4,23 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/spf13/viper"
+	"github.com/topport/magic/internal/config"
 	"os"
 	"path/filepath"
 	"strings"
 
 	uds "github.com/asabya/go-ipc-uds"
-	"github.com/topport/magic/cli/cmd"
-	"github.com/topport/magic/cli/common"
-	"github.com/topport/magic/internal/repo"
 	logger "github.com/ipfs/go-log/v2"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
+	"github.com/topport/magic/cli/cmd"
+	"github.com/topport/magic/cli/common"
+	"github.com/topport/magic/internal/repo"
 )
+
+var cfgFile string
 
 const (
 	argSeparator = "$^~@@*"
@@ -36,11 +40,64 @@ network through a CLI Interface.
 )
 
 func init() {
+
+	fmt.Println("statring")
+	cobra.OnInitialize(initConfig)
+	fmt.Println("statring2")
+
+	// Here you will define your flags and configuration settings.
+	// Cobra supports persistent flags, which, if defined here,
+	// will be global for your application.
+
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.magic.json)")
+	//rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.cobra.yaml)")
+	// Cobra also supports local flags, which will only run
+	// when this action is called directly.
+	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	logger.SetLogLevel("uds", "Debug")
 	logger.SetLogLevel("cmd", "Debug")
-}
 
+}
+var cnf config.Config
+
+// initConfig reads in config file and ENV variables if set.
+func initConfig() {
+	//fmt.Println(cfgFile,"init config")
+	if cfgFile != "" {
+		// Use config file from the flag.
+		viper.SetConfigFile(cfgFile)
+	} else {
+		// Find home directory.
+		home, err := os.UserHomeDir()
+		cobra.CheckErr(err)
+		//fmt.Println(home)
+		// Search config in home directory with name ".cobra-tools" (without extension).
+		viper.AddConfigPath(home)
+		viper.SetConfigType("json")
+		viper.SetConfigName(".magic")
+	}
+
+	viper.AutomaticEnv() // read in environment variables that match
+	//fmt.Println(viper.ConfigFileUsed(),"asdfasdfasdf")
+	// If a config file is found, read it in.
+	if err := viper.ReadInConfig(); err == nil {
+		fmt.Fprintln(os.Stderr, "Using config file:", viper.ConfigFileUsed())
+	}
+	err := viper.Unmarshal(&cnf)
+	if err != nil {
+		fmt.Println(err,"bb")
+		log.Fatalf("Unmarshal config failed: %v", err)
+	}
+}
 func main() {
+
+	fmt.Println("statring3")
+
+
+	fmt.Println(cnf.Identity,"ff")
+
+	fmt.Println("statring4")
+
 	ctx, cancel := context.WithCancel(context.Background())
 	home, err := os.UserHomeDir()
 	if err != nil {
