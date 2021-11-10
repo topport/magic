@@ -6,7 +6,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/datahop/ipfs-lite/internal/redcon"
+	"github.com/topport/magic/internal/redcon"
 	//crdt "github.com/ipfs/go-ds-crdt"
 	"os"
 	"os/signal"
@@ -14,8 +14,8 @@ import (
 	"strings"
 	"sync"
 
-	ipfslite "github.com/datahop/ipfs-lite"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	ipfslite "github.com/topport/magic"
+	"github.com/topport/magic/internal/repo"
 )
 var addr=":6381"
 

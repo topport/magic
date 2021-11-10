@@ -1,11 +1,11 @@
 SUPPORT := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))/.release
-VERSION_PACKAGE := github.com/datahop/ipfs-lite/version
+VERSION_PACKAGE := github.com/topport/magic/version
 
 build-mobile: VERSION := $(shell . $(SUPPORT); getMobileVersion)
 build-mobile:
 	@gomobile bind -o ./mobile/datahop.aar -target=android -ldflags "\
 	-X '$(VERSION_PACKAGE).MobileVersion=$(VERSION)'" \
-	github.com/datahop/ipfs-lite/mobile
+	github.com/topport/magic/mobile
 
 patch-release-mobile: VERSION := $(shell . $(SUPPORT); nextMobilePatchVersion)
 patch-release-mobile:

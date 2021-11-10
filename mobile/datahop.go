@@ -1,6 +1,6 @@
 package datahop
 
-//go:generate gomobile bind -o datahop.aar -target=android github.com/datahop/ipfs-lite/mobile
+//go:generate gomobile bind -o datahop.aar -target=android github.com/topport/magic/mobile
 
 import (
 	"bytes"
@@ -14,13 +14,13 @@ import (
 	"sync"
 	"time"
 
-	ipfslite "github.com/datahop/ipfs-lite"
-	"github.com/datahop/ipfs-lite/internal/config"
-	"github.com/datahop/ipfs-lite/internal/replication"
-	"github.com/datahop/ipfs-lite/internal/repo"
-	"github.com/datahop/ipfs-lite/internal/security"
-	types "github.com/datahop/ipfs-lite/pb"
-	"github.com/datahop/ipfs-lite/version"
+	ipfslite "github.com/topport/magic"
+	"github.com/topport/magic/internal/config"
+	"github.com/topport/magic/internal/replication"
+	"github.com/topport/magic/internal/repo"
+	"github.com/topport/magic/internal/security"
+	types "github.com/topport/magic/pb"
+	"github.com/topport/magic/version"
 	"github.com/golang/protobuf/proto"
 	"github.com/h2non/filetype"
 	"github.com/ipfs/go-datastore"

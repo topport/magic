@@ -2,7 +2,7 @@ package redcon
 
 import (
 	"fmt"
-	ipfslite "github.com/datahop/ipfs-lite"
+	ipfslite "github.com/topport/magic"
 	ds "github.com/ipfs/go-datastore"
 	"github.com/tidwall/redcon"
 	"strings"

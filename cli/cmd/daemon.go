@@ -5,10 +5,10 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/datahop/ipfs-lite/internal/matrix"
+	"github.com/topport/magic/internal/matrix"
 
-	ipfslite "github.com/datahop/ipfs-lite"
-	"github.com/datahop/ipfs-lite/cli/common"
+	ipfslite "github.com/topport/magic"
+	"github.com/topport/magic/cli/common"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-libp2p-core/network"
 	ma "github.com/multiformats/go-multiaddr"

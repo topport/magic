@@ -3,7 +3,7 @@ package cmd
 import (
 	"errors"
 
-	"github.com/datahop/ipfs-lite/cli/common"
+	"github.com/topport/magic/cli/common"
 	"github.com/ipfs/go-datastore"
 	"github.com/spf13/cobra"
 )

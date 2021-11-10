@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/datahop/ipfs-lite/internal/replication"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	"github.com/topport/magic/internal/replication"
+	"github.com/topport/magic/internal/repo"
 	"github.com/h2non/filetype"
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-datastore"

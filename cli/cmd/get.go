@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/datahop/ipfs-lite/cli/common"
-	"github.com/datahop/ipfs-lite/cli/out"
-	"github.com/datahop/ipfs-lite/internal/security"
+	"github.com/topport/magic/cli/common"
+	"github.com/topport/magic/cli/out"
+	"github.com/topport/magic/internal/security"
 	"github.com/spf13/cobra"
 )
 

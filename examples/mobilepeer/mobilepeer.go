@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/datahop/ipfs-lite/internal/repo"
-	datahop "github.com/datahop/ipfs-lite/mobile"
+	"github.com/topport/magic/internal/repo"
+	datahop "github.com/topport/magic/mobile"
 	logger "github.com/ipfs/go-log/v2"
 )
 

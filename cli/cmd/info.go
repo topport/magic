@@ -4,9 +4,9 @@ import (
 	"strings"
 
 	"github.com/bits-and-blooms/bloom/v3"
-	"github.com/datahop/ipfs-lite/cli/common"
-	"github.com/datahop/ipfs-lite/cli/out"
-	"github.com/datahop/ipfs-lite/internal/config"
+	"github.com/topport/magic/cli/common"
+	"github.com/topport/magic/cli/out"
+	"github.com/topport/magic/internal/config"
 	"github.com/ipfs/go-datastore"
 	"github.com/spf13/cobra"
 )

@@ -1,8 +1,8 @@
 # IPFS-Lite
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/datahop/ipfs-lite.svg)](https://pkg.go.dev/github.com/datahop/ipfs-lite)
-[![Go Report Card](https://goreportcard.com/badge/github.com/datahop/ipfs-lite)](https://goreportcard.com/report/github.com/datahop/ipfs-lite)
-[![Actions Status](https://github.com/datahop/ipfs-lite/workflows/Go/badge.svg)](https://github.com/datahop/ipfs-lite/actions)
+[![Go Reference](https://pkg.go.dev/badge/github.com/topport/magic.svg)](https://pkg.go.dev/github.com/topport/magic)
+[![Go Report Card](https://goreportcard.com/badge/github.com/topport/magic)](https://goreportcard.com/report/github.com/topport/magic)
+[![Actions Status](https://github.com/topport/magic/workflows/Go/badge.svg)](https://github.com/topport/magic/actions)
 [![codecov](https://codecov.io/gh/datahop/ipfs-lite/branch/master/graph/badge.svg)](https://codecov.io/gh/datahop/ipfs-lite)
 
 IPFS-Lite is an embeddable, lightweight IPFS peer. This fork started
@@ -39,7 +39,7 @@ datahop it adds some more features of full ipfs, such as config, repo, leveldb e
 
 ## Documentation
 
-[Go pkg docs](https://pkg.go.dev/github.com/datahop/ipfs-lite)
+[Go pkg docs](https://pkg.go.dev/github.com/topport/magic)
 
 ## License
 

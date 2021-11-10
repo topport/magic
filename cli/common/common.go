@@ -3,8 +3,8 @@ package common
 import (
 	"context"
 
-	ipfslite "github.com/datahop/ipfs-lite"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	ipfslite "github.com/topport/magic"
+	"github.com/topport/magic/internal/repo"
 )
 
 // Common features for cli commands

@@ -13,15 +13,15 @@ import (
 	"sync"
 
 	"github.com/bits-and-blooms/bloom/v3"
-	"github.com/datahop/ipfs-lite/internal/config"
-	"github.com/datahop/ipfs-lite/internal/matrix"
+	"github.com/topport/magic/internal/config"
+	"github.com/topport/magic/internal/matrix"
 	badger "github.com/dgraph-io/badger/v2"
 	"github.com/facebookgo/atomicfile"
 	"github.com/ipfs/go-datastore"
 	ds "github.com/ipfs/go-datastore"
 	syncds "github.com/ipfs/go-datastore/sync"
 
-	badgerds "github.com/datahop/ipfs-lite/third/badger"
+	badgerds "github.com/topport/magic/third/badger"
 
 	lockfile "github.com/ipfs/go-fs-lock"
 	logging "github.com/ipfs/go-log/v2"

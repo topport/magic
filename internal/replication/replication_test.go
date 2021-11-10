@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/bits-and-blooms/bloom/v3"
-	"github.com/datahop/ipfs-lite/internal/config"
-	"github.com/datahop/ipfs-lite/internal/matrix"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	"github.com/topport/magic/internal/config"
+	"github.com/topport/magic/internal/matrix"
+	"github.com/topport/magic/internal/repo"
 	"github.com/h2non/filetype"
 	"github.com/ipfs/go-cid"
 	syncds "github.com/ipfs/go-datastore/sync"

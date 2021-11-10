@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/datahop/ipfs-lite/internal/repo"
+	"github.com/topport/magic/internal/repo"
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-datastore/query"

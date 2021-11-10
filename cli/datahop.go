@@ -9,9 +9,9 @@ import (
 	"strings"
 
 	uds "github.com/asabya/go-ipc-uds"
-	"github.com/datahop/ipfs-lite/cli/cmd"
-	"github.com/datahop/ipfs-lite/cli/common"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	"github.com/topport/magic/cli/cmd"
+	"github.com/topport/magic/cli/common"
+	"github.com/topport/magic/internal/repo"
 	logger "github.com/ipfs/go-log/v2"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/spf13/cobra"

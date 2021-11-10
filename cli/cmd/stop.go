@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/datahop/ipfs-lite/cli/common"
+	"github.com/topport/magic/cli/common"
 	"github.com/spf13/cobra"
 )
 

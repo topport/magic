@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/datahop/ipfs-lite/internal/config"
+	"github.com/topport/magic/internal/config"
 
-	"github.com/datahop/ipfs-lite/internal/replication"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	"github.com/topport/magic/internal/replication"
+	"github.com/topport/magic/internal/repo"
 	"github.com/grandcat/zeroconf"
 	"github.com/ipfs/go-bitswap"
 	"github.com/ipfs/go-bitswap/network"

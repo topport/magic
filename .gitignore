@@ -1,0 +1,8 @@
+.DS_Store
+.dataset
+.qri
+/qri
+node_modules
+coverage.txt
+./.idea
+examples

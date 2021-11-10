@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	ipfslite "github.com/datahop/ipfs-lite"
-	"github.com/datahop/ipfs-lite/internal/replication"
-	"github.com/datahop/ipfs-lite/internal/repo"
+	ipfslite "github.com/topport/magic"
+	"github.com/topport/magic/internal/replication"
+	"github.com/topport/magic/internal/repo"
 	"github.com/h2non/filetype"
 	"github.com/libp2p/go-libp2p-core/peer"
 	ma "github.com/multiformats/go-multiaddr"
