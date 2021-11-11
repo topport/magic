@@ -2,8 +2,11 @@ package command
 
 import (
 	"fmt"
+	"github.com/topport/magic/cli/common"
+
 	"runtime"
 
+	"context"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
@@ -16,13 +19,22 @@ func Execute() error {
 	rootCmd := newRootCmd(&cfg)
 	rootCmd.SilenceErrors = true
 
+	ctx, cancel := context.WithCancel(context.Background())
+
+	comm := &common.Common{
+
+		Context: ctx,
+		Cancel:  cancel,
+	}
+
+
 	subcommands := []*cobra.Command{
-		newAgentCmd(&cfg.Agent),
+		//newAgentCmd(comm,&cfg.Agent),
 		//newConnectCmd(&cfg.Exec),
 		//newConvertCmd(&cfg.Convert),
 		//newDbManagerCmd(&config.CombinedDbManager{DbManager: &cfg.DbManager, Server: &cfg.Server}),
 		//newExecCmd(&cfg.Exec),
-		newServerCmd(&cfg.Server),
+		newServerCmd(comm,&cfg.Server),
 		newVersionCmd(),
 	}
 

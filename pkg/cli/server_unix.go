@@ -4,6 +4,7 @@ package cli
 
 import (
 	"fmt"
+	"github.com/topport/magic/cli/common"
 	"os"
 	"os/signal"
 	"syscall"
@@ -14,24 +15,19 @@ import (
 	"github.com/topport/magic/pkg/config"
 )
 
-func StartServer(c *config.Server) error {
+func StartServer(comm *common.Common,c *config.Server) error {
 	logLevel, err := logrus.ParseLevel(c.LogLevel)
 	if err != nil {
 		return err
 	}
 	logrus.SetLevel(logLevel)
 	logger := logrus.StandardLogger()
-	srv, err := newServerService(logger, c)
+	srv, err := newServerService(comm,logger, c)
 	if err != nil {
 		return fmt.Errorf("could not initialize server: %w", err)
 	}
 
-	if srv.config.Auth.JWTSecret == "" {
-		srv.config.Auth.JWTSecret, err = srv.storage.JWT()
-		if err != nil {
-			return err
-		}
-	}
+
 
 	var stopTime time.Time
 	s := make(chan os.Signal, 1)

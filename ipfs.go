@@ -5,15 +5,12 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
+	"github.com/topport/magic/internal/config"
 	"io"
 	"strings"
 	"sync"
 	"time"
 
-	"github.com/topport/magic/internal/config"
-
-	"github.com/topport/magic/internal/replication"
-	"github.com/topport/magic/internal/repo"
 	"github.com/grandcat/zeroconf"
 	"github.com/ipfs/go-bitswap"
 	"github.com/ipfs/go-bitswap/network"
@@ -38,6 +35,8 @@ import (
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	"github.com/multiformats/go-multiaddr"
 	"github.com/multiformats/go-multihash"
+	"github.com/topport/magic/internal/replication"
+	"github.com/topport/magic/internal/repo"
 )
 
 func init() {
@@ -157,6 +156,8 @@ func New(
 
 	listenAddrs := []multiaddr.Multiaddr{}
 	confAddrs := cfg.Addresses.Swarm
+
+	fmt.Println(cfg)
 	for _, v := range confAddrs {
 		listen, _ := multiaddr.NewMultiaddr(v)
 		listenAddrs = append(listenAddrs, listen)
@@ -603,7 +604,10 @@ func (p *Peer) ZeroConfScan() {
 			log.Warn("Discovered peer with no ipv4")
 			return
 		}
+		//cnf,err:=p.Repo.Config()
+	 	//fmt.Println(cnf.SwarmPort,"mali")
 		address := fmt.Sprintf("/ip4/%s/tcp/%s/p2p/%s", entry.AddrIPv4[0], config.SwarmPort, entry.Instance)
+		//address := fmt.Sprintf("/ip4/%s/tcp/%s/p2p/%s", entry.AddrIPv4[0], cnf.SwarmPort, entry.Instance)
 
 	 	fmt.Println(address)
 		maddr, err := multiaddr.NewMultiaddr(address)

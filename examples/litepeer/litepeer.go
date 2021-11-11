@@ -24,12 +24,12 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	home, err := os.UserHomeDir()
-	if err != nil {
-		return
-	}
-	root := filepath.Join(home, repo.Root)
-	err = repo.Init(root, "0")
+	//home, err := os.UserHomeDir()
+	//if err != nil {
+	//	return
+	//}
+	root := filepath.Join("/doc/magicrepo/datastore")
+	err := repo.Init(root, "0")
 	if err != nil {
 		return
 	}

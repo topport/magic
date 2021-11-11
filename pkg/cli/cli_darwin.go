@@ -27,7 +27,7 @@ func getInstallPrefix() string {
 		return ""
 	}
 	cellarPath := filepath.Clean(filepath.Join(resolvePath(executablePath), "../../../.."))
-	fmt.Println(cellarPath,"aaaaa")
+	//fmt.Println(cellarPath,"aaaaa")
 
 	if !strings.HasSuffix(cellarPath, "Cellar") {
 

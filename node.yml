@@ -1,0 +1,4 @@
+log-level: error
+storage-path: /doc/magicrepo1
+api-bind-addr: 4040
+redis-bind-addr: :6380
